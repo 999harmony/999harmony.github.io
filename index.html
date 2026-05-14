@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="人生依存（じんせいいぞん）の小説ポートフォリオサイト。ジャンル分けしにくい純文学・文学フリマ同人小説を執筆。代表作「雨上がりの宝物」ほか。">
+<meta name="keywords" content="人生依存,小説家,純文学,小説家になろう,カクヨム,文学フリマ,同人小説,じんせいいぞん">
+<meta property="og:title" content="人生依存 | 小説家ポートフォリオ">
+<meta property="og:description" content="彼ら彼女らは確かにあなたの風景に。ジャンル分けしにくい物語を書く小説家・人生依存の作品一覧。">
+<meta property="og:type" content="website">
+<title>人生依存 | 小説家ポートフォリオ</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg-text {
+    position: absolute;
+    bottom: -0.05em;
+    right: -0.02em;
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(8rem, 20vw, 22rem);
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(124,111,160,0.07);
+    pointer-events: none;
+    line-height: 1;
+    user-select: none;
+  }
+  .hero-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.35em;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 1s 0.2s forwards;
+  }
+  .hero-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 0.08em;
+    color: #ece9f5;
+    opacity: 0;
+    animation: fadeUp 1s 0.4s forwards;
+  }
+  .hero-name-reading {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--text3);
+    margin-top: 0.4rem;
+    opacity: 0;
+    animation: fadeUp 1s 0.55s forwards;
+  }
+  .hero-catch {
+    margin-top: 2.5rem;
+    font-size: clamp(0.9rem, 2vw, 1.15rem);
+    color: var(--text2);
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    max-width: 34em;
+    border-left: 2px solid var(--accent);
+    padding-left: 1.2rem;
+    opacity: 0;
+    animation: fadeUp 1s 0.7s forwards;
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--text3);
+    opacity: 0;
+    animation: fadeIn 1s 1.4s forwards;
+  }
+  .hero-scroll::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--text3);
+  }
+  .hero-nav-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    opacity: 0;
+    animation: fadeUp 1s 1s forwards;
+  }
+  .hero-nav-link {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--text3);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border2);
+    border-radius: 1px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  .hero-nav-link:hover { color: var(--accent2); border-color: var(--border); }
+  @media (max-width: 768px) {
+    #hero { padding: 0 1.5rem; }
+    .hero-nav-links { flex-wrap: wrap; gap: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">人生依存</a>
+  <ul class="nav-links">
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="works.html">WORKS</a></li>
+    <li><a href="profile.html">PROFILE</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg-text">依存</div>
+  <p class="hero-eyebrow">NOVELIST PORTFOLIO</p>
+  <h1 class="hero-name">人生依存</h1>
+  <p class="hero-name-reading">じんせいいぞん</p>
+  <p class="hero-catch">彼ら彼女らは確かにあなたの風景に</p>
+  <nav class="hero-nav-links">
+    <a href="about.html" class="hero-nav-link">ABOUT</a>
+    <a href="works.html" class="hero-nav-link">WORKS</a>
+    <a href="profile.html" class="hero-nav-link">PROFILE</a>
+    <a href="contact.html" class="hero-nav-link">CONTACT</a>
+  </nav>
+  <div class="hero-scroll">scroll</div>
+</section>
+
+<footer>
+  <p>© 人生依存 All rights reserved.</p>
+  <p>Built with GitHub Pages</p>
+</footer>
+
+
+<!-- SHARE FAB -->
+<div class="share-fab">
+  <span class="share-copied" id="share-copied">copied!</span>
+  <div class="share-menu" id="share-menu">
+    <button class="share-btn" id="copy-btn">🔗 URLをコピー</button>
+    <a class="share-btn" id="x-btn" href="#" target="_blank" rel="noopener">𝕏 Xでシェア</a>
+    <a class="share-btn" id="line-btn" href="#" target="_blank" rel="noopener">💬 LINEでシェア</a>
+  </div>
+  <button class="share-toggle" id="share-toggle" aria-label="シェア">⤴</button>
+</div>
+
+<script>
+(function() {
+  var toggle = document.getElementById("share-toggle");
+  var menu = document.getElementById("share-menu");
+  var copyBtn = document.getElementById("copy-btn");
+  var xBtn = document.getElementById("x-btn");
+  var lineBtn = document.getElementById("line-btn");
+  var copied = document.getElementById("share-copied");
+  var url = "https://999harmony.github.io/";
+  var text = "人生依存｜小説家ポートフォリオ";
+
+  xBtn.href = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(url) + "&text=" + encodeURIComponent(text);
+  lineBtn.href = "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(url);
+
+  toggle.addEventListener("click", function() { menu.classList.toggle("open"); });
+
+  copyBtn.addEventListener("click", function() {
+    navigator.clipboard.writeText(url).then(function() {
+      copied.classList.add("show");
+      setTimeout(function() { copied.classList.remove("show"); }, 2000);
+    });
+  });
+
+  document.addEventListener("click", function(e) {
+    if (!e.target.closest(".share-fab")) menu.classList.remove("open");
+  });
+})();
+</script>
+</body>
+</html>

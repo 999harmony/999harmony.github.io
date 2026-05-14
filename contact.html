@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="人生依存へのお問い合わせ・各種リンク。Twitter、Instagram、小説家になろう、カクヨム、メロンブックス、BOOTH。">
+<title>CONTACT | 人生依存</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">人生依存</a>
+  <ul class="nav-links">
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="works.html">WORKS</a></li>
+    <li><a href="profile.html">PROFILE</a></li>
+    <li><a href="contact.html" class="active">CONTACT</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-bg">contact</div>
+  <p class="page-header-eyebrow">CONTACT</p>
+  <h1 class="page-header-title">リンク・お問い合わせ</h1>
+</div>
+
+<hr class="divider">
+
+<section>
+  <div class="section-inner">
+    <div class="contact-link-area reveal">
+      <div class="contact-links">
+        <a href="mailto:rikurai0715@outlook.jp" class="contact-link">
+          <span class="contact-link-icon">✉</span>
+          <span>Email</span>
+        </a>
+        <a href="https://twitter.com/999harmony" target="_blank" rel="noopener" class="contact-link">
+          <span>X（旧Twitter）</span>
+        </a>
+        <a href="https://www.instagram.com/999_harmony" target="_blank" rel="noopener" class="contact-link">
+          <span>Instagram</span>
+        </a>
+        <a href="https://mypage.syosetu.com/mypage/profile/userid/946989/" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-icon">📖</span>
+          <span>小説家になろう</span>
+        </a>
+        <a href="https://kakuyomu.jp/users/999harmony" target="_blank" rel="noopener" class="contact-link" style="flex-direction: column; align-items: flex-start; gap: 0.6rem;">
+          <span style="display:flex; align-items:center; gap:0.8rem;"><span class="contact-link-icon">📖</span><span>カクヨム</span></span>
+          <img src="qr_kakuyomu.png" alt="カクヨムQRコード" style="width: 90px; height: 90px; border-radius: 4px; display: block;">
+        </a>
+        <a href="https://www.melonbooks.co.jp/circle/index.php?circle_id=134625" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-icon">🛒</span>
+          <span>メロンブックス</span>
+        </a>
+        <a href="https://life-dependence.booth.pm/" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-icon">🏪</span>
+          <span>BOOTH</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 人生依存 All rights reserved.</p>
+  <p>Built with GitHub Pages</p>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+reveals.forEach(el => observer.observe(el));
+</script>
+
+<!-- SHARE FAB -->
+<div class="share-fab">
+  <span class="share-copied" id="share-copied">copied!</span>
+  <div class="share-menu" id="share-menu">
+    <button class="share-btn" id="copy-btn">🔗 URLをコピー</button>
+    <a class="share-btn" id="x-btn" href="#" target="_blank" rel="noopener">𝕏 Xでシェア</a>
+    <a class="share-btn" id="line-btn" href="#" target="_blank" rel="noopener">💬 LINEでシェア</a>
+  </div>
+  <button class="share-toggle" id="share-toggle" aria-label="シェア">⤴</button>
+</div>
+
+<script>
+(function() {
+  var toggle = document.getElementById("share-toggle");
+  var menu = document.getElementById("share-menu");
+  var copyBtn = document.getElementById("copy-btn");
+  var xBtn = document.getElementById("x-btn");
+  var lineBtn = document.getElementById("line-btn");
+  var copied = document.getElementById("share-copied");
+  var url = "https://999harmony.github.io/";
+  var text = "人生依存｜小説家ポートフォリオ";
+
+  xBtn.href = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(url) + "&text=" + encodeURIComponent(text);
+  lineBtn.href = "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(url);
+
+  toggle.addEventListener("click", function() { menu.classList.toggle("open"); });
+
+  copyBtn.addEventListener("click", function() {
+    navigator.clipboard.writeText(url).then(function() {
+      copied.classList.add("show");
+      setTimeout(function() { copied.classList.remove("show"); }, 2000);
+    });
+  });
+
+  document.addEventListener("click", function(e) {
+    if (!e.target.closest(".share-fab")) menu.classList.remove("open");
+  });
+})();
+</script>
+</body>
+</html>
